@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function ValidateEmail(inputText) {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if (inputText.value.match(mailformat)) {
+
+			document.form1.email.focus();
+			return true;
+		} else {
+			alert("You have entered an invalid email address!");
+			document.form1.email.focus();
+			return false;
+		}
+		
+	}
+
+</script>
+
+<style type="text/css">
+body {
+	background-color: white;
+	background-image: url("medico.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+img {
+	width: 200px;
+	height: 300px;
+	object-fit: none;
+}
+
+#one {
+	height: 500px;
+	width: 500px;
+}
+
+div {
+	margin: 20px;
+	background-color: #f6ddcc;
+}
+
+.form_wrapper {
+	width: 600px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 10px 1px 1px 1px;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 1px 30px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=text], input[type=email] {
+	width: 100%;
+	padding: 1px 30px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+	<div class="form_wrapper" align="center" id="two">
+		<div class="form_container">
+			<div class="title_container">
+				<h2></h2>
+			</div>
+			<div class="row clearfix">
+				<div class="">
+					<form action="" name="form1"
+						onsubmit="ValidateEmail(document.form1.email)">
+
+						<div class="input_field">
+							<span><i aria-hidden="true" class="fa fa-envelope icon"></i></span>
+							<input type="email" name="email" placeholder="Email" required />
+
+						</div>
+						<div class="input_field">
+							<span><i aria-hidden="true" class="fa fa-lock"></i></span> <input
+								type="password" name="password" placeholder="password" required />
+						</div>
+						<div class="input_field">
+							<span><i aria-hidden="true" class="fa fa-lock"></i></span> <input
+								type="password" name="password" placeholder="Re-type Password"
+								required />
+						</div>
+						<div class="row clearfix">
+							<div class="col_half">
+								<div class="input_field">
+									<span><i aria-hidden="true" class="fa fa-user"></i></span> <input
+										type="text" name="name" placeholder="First Name" />
+								</div>
+							</div>
+							<div class="col_half">
+								<div class="input_field">
+									<span><i aria-hidden="true" class="fa fa-user"></i></span> <input
+										type="text" name="name" placeholder="Last Name" required />
+								</div>
+							</div>
+						</div>
+						<div class="input_field radio_option">
+							<input type="radio" name="radiogroup1" id="rd1"> <label
+								for="rd1">Male</label> <input type="radio" name="radiogroup1"
+								id="rd2"> <label for="rd2">Female</label> <input
+								type="radio" name="radiogroup1" id="rd3"> <label
+								for="rd3">Other</label>
+						</div>
+						<div class="input_field select_option">
+							<select>
+								<option>Select District</option>
+								<option>Alapuzha</option>
+								<option>Ernakulam</option>
+								<option>idukki</option>
+								<option>Kannur</option>
+								<option>Kasargod</option>
+
+								<option>Kollam</option>
+								<option>Kottayam</option>
+								<option>Kozhikode</option>
+
+								<option>Malappuram</option>
+								<option>Palakkad</option>
+								<option>Pathanamthitta</option>
+
+
+								<option>Thiruvananthapuram</option>
+								<option>Thrissur</option>
+								<option>Wayanad</option>
+
+
+
+
+
+							</select>
+							<div class="select_arrow"></div>
+						</div>
+						<div class="input_field checkbox_option">
+							<input type="checkbox" id="cb1"> <label for="cb1">I
+								agree with terms and conditions</label>
+						</div>
+						<button type="button"><a href="appoinment.html"> Submit</button></a>
+ 
+
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
